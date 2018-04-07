@@ -24,9 +24,8 @@ __zplug::job::parallel::init()
             rm -f \
                 "$_zplug_build_log[success]" \
                 "$_zplug_build_log[failure]" \
-                "$_zplug_build_log[timeout]" \
-                "$_zplug_log[install]"
-            touch "$_zplug_log[install]"
+                "$_zplug_build_log[timeout]"
+            : >| "$_zplug_log[install]"
             ;;
         update)
             starting_message="update"
@@ -35,16 +34,14 @@ __zplug::job::parallel::init()
             rm -f \
                 "$_zplug_build_log[success]" \
                 "$_zplug_build_log[failure]" \
-                "$_zplug_build_log[timeout]" \
-                "$_zplug_log[update]"
-            touch "$_zplug_log[update]"
+                "$_zplug_build_log[timeout]"
+            : >| "$_zplug_log[update]"
             ;;
         status)
             starting_message="get remote status"
             zstyle -s ':zplug:core:status' 'select' is_select
             zstyle ':zplug:core:status' 'select' no
-            rm -f "$_zplug_log[status]"
-            touch "$_zplug_log[status]"
+            : >| "$_zplug_log[status]"
             ;;
         *)
             return 1

@@ -149,7 +149,7 @@ __zplug::core::core::prepare()
     done
 
 
-    touch "$_zplug_log[trace]"
+    : >> "$_zplug_log[trace]"
 
     # # Run compinit if zplug comp file hasn't load
     # if (( ! $+functions[_zplug] )); then

@@ -48,6 +48,5 @@ __zplug::io::file::rm_touch()
         mkdir -p "${filepath:h}"
     fi
 
-    rm -f "$filepath"
-    touch "$filepath"
+    : >| "$filepath"
 }
