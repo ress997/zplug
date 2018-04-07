@@ -145,7 +145,7 @@ __zplug::core::core::prepare()
     )
 
     for dir in "$ZPLUG_HOME"/{,log} "$ZPLUG_BIN" "$ZPLUG_CACHE_DIR" "$ZPLUG_REPOS"; do
-        [[ -d "$dir" ]] || mkdir -p "$dir"
+        [[ -d "$dir" ]] || zf_mkdir -p "$dir"
     done
 
 

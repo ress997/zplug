@@ -262,7 +262,7 @@ __zplug::job::handle::hook()
                 builtin printf "$repo\n" >>|"$_zplug_build_log[timeout]"
                 builtin printf "$repo\n" >>|"$_zplug_build_log[rollback]"
             fi
-            rm -f "$_zplug_lock[job]"
+            zf_rm -f "$_zplug_lock[job]"
         } &
     fi
 

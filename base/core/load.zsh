@@ -155,7 +155,7 @@ __zplug::core::load::as_command()
 
     {
         chmod 755 "$load_path"
-        ln -snf "$load_path" "$_path"
+        zf_ln -snf "$load_path" "$_path"
     } &>/dev/null
     status_code=$status
 

@@ -21,7 +21,7 @@ __zplug::job::parallel::init()
                     return 1
                 fi
             fi
-            rm -f \
+            zf_rm -f \
                 "$_zplug_build_log[success]" \
                 "$_zplug_build_log[failure]" \
                 "$_zplug_build_log[timeout]"
@@ -31,7 +31,7 @@ __zplug::job::parallel::init()
             starting_message="update"
             zstyle -s ':zplug:core:update' 'select' is_select
             zstyle ':zplug:core:update' 'select' no
-            rm -f \
+            zf_rm -f \
                 "$_zplug_build_log[success]" \
                 "$_zplug_build_log[failure]" \
                 "$_zplug_build_log[timeout]"

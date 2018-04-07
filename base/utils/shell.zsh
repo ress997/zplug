@@ -5,7 +5,7 @@ __zplug::utils::shell::remove_deadlinks()
     for link in "$@"
     do
         if [[ -L $link ]] && [[ ! -e $link ]]; then
-            rm -f "$link"
+            zf_rm -f "$link"
         fi
     done
 }
@@ -145,7 +145,7 @@ __zplug::utils::shell::cd()
     for dir in "$dirs[@]"
     do
         if $is_force; then
-            [[ -d $dir ]] || mkdir -p "$dir"
+            [[ -d $dir ]] || zf_mkdir -p "$dir"
         fi
 
         builtin cd "$dir" &>/dev/null

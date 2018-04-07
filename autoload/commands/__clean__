@@ -105,8 +105,8 @@ do
 
     if ${(z)is_force:-"read -q"}; then
         # Remove directories
-        rm -rf "$repo"
-        rmdir "${repo:h}"
+        zf_rm -rf "$repo"
+        zf_rmdir "${repo:h}"
         # Clear cache
         __zplug::core::core::run_interfaces 'clear'
     fi \

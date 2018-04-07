@@ -229,7 +229,7 @@ __zplug::utils::git::merge()
     else
         # Diverged (e.g. conflicts)
         __zplug::utils::shell::cd "$HOME"
-        rm -rf "$git[dir]"
+        zf_rm -rf "$git[dir]"
         __zplug::core::core::run_interfaces \
             "install" \
             "$git[repo]" &>/dev/null

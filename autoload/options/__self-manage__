@@ -10,6 +10,6 @@ if ! __zplug::base::base::zpluged $_ZPLUG_PACKAGE; then
     return 1
 fi
 
-ln -snf \
+zf_ln -snf \
     "$ZPLUG_REPOS/$_ZPLUG_PACKAGE/init.zsh" \
     "$ZPLUG_HOME/init.zsh"

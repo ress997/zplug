@@ -36,7 +36,7 @@ do
             return $status
             ;;
         clear)
-            rm -i "$_zplug_log[trace]"
+            zf_rm -i "$_zplug_log[trace]"
             return $status
             ;;
         count)
