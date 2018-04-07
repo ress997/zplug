@@ -9,8 +9,7 @@ __zplug::core::cache::set_file()
     # Keep compatible with version 2.3.3 or lower
     __zplug::core::migration::cache_file_dir
 
-    rm -f "$_zplug_cache[$file]"
-    touch "$_zplug_cache[$file]"
+    : >| "$_zplug_cache[$file]"
 }
 
 __zplug::core::cache::expose()

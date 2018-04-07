@@ -18,3 +18,4 @@ colors
 zmodload zsh/system
 zmodload zsh/datetime
 zmodload zsh/parameter
+zmodload -m -F zsh/files b:zf_\*

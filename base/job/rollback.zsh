@@ -40,7 +40,7 @@ __zplug::job::rollback::build()
 
     # Overwrite
     if (( $#failed == 0 )); then
-        rm -f "$_zplug_build_log[rollback]"
+        zf_rm -f "$_zplug_build_log[rollback]"
         return 0
     fi
 

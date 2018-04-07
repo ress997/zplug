@@ -32,7 +32,7 @@ __zplug::job::handle::flock()
     if [[ ! -f $file ]]; then
         __zplug::log::write::info \
             "create $file because it does not exist"
-        touch "$file"
+        : >> "$file"
     fi
 
     local lock_fd
@@ -250,7 +250,7 @@ __zplug::job::handle::hook()
         } & hook_pids[$repo]=$!
         # Run the timeout process in background
         {
-            touch "$_zplug_lock[job]"
+            : >> "$_zplug_lock[job]"
             # kill the process for hook-build after sleeping
             # during the number of seconds that has been set as a timeout
             sleep "$timeout"
@@ -262,7 +262,7 @@ __zplug::job::handle::hook()
                 builtin printf "$repo\n" >>|"$_zplug_build_log[timeout]"
                 builtin printf "$repo\n" >>|"$_zplug_build_log[rollback]"
             fi
-            rm -f "$_zplug_lock[job]"
+            zf_rm -f "$_zplug_lock[job]"
         } &
     fi
 

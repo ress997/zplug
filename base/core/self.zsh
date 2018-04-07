@@ -11,7 +11,7 @@ __zplug::core::self::init()
     fi
 
     # Link
-    ln -snf "$src" "$dst"
+    zf_ln -snf "$src" "$dst"
 }
 
 __zplug::core::self::update()

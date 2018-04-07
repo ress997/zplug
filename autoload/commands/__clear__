@@ -27,7 +27,7 @@ do
     shift
 done
 
-rm -rf \
+zf_rm -rf \
     "$ZPLUG_CACHE_DIR" \
     "$ZPLUG_HOME/zcompdump" \
     "$ZPLUG_HOME/zcompdump.zwc"

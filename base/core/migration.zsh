@@ -54,7 +54,7 @@ __zplug::core::migration::cache_file_dir()
 {
     # If ZPLUG_CACHE_FILE is defined
     if [[ -f $ZPLUG_CACHE_DIR ]]; then
-        rm -f "$ZPLUG_CACHE_DIR"
+        zf_rm -f "$ZPLUG_CACHE_DIR"
     fi
-    mkdir -p "$ZPLUG_CACHE_DIR"
+    zf_mkdir -p "$ZPLUG_CACHE_DIR"
 }
