@@ -144,10 +144,10 @@ __zplug::core::core::prepare()
     "$fpath[@]"
     )
 
-    mkdir -p "$ZPLUG_HOME"/{,log}
-    mkdir -p "$ZPLUG_BIN"
-    mkdir -p "$ZPLUG_CACHE_DIR"
-    mkdir -p "$ZPLUG_REPOS"
+    for dir in "$ZPLUG_HOME"/{,log} "$ZPLUG_BIN" "$ZPLUG_CACHE_DIR" "$ZPLUG_REPOS"; do
+        [[ -d "$dir" ]] || mkdir -p "$dir"
+    done
+
 
     touch "$_zplug_log[trace]"
 
