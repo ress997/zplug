@@ -1,6 +1,6 @@
 __zplug::core::self::init()
 {
-    local repo="zplug/zplug"
+    local repo=$_ZPLUG_PACKAGE
     local src="$ZPLUG_REPOS/$repo/init.zsh"
     local dst="$ZPLUG_HOME/init.zsh"
 
@@ -19,11 +19,11 @@ __zplug::core::self::update()
     local ret=0
     local HEAD
 
-    if ! __zplug::base::base::zpluged "zplug/zplug"; then
+    if ! __zplug::base::base::zpluged $_ZPLUG_PACKAGE; then
         __zplug::io::print::f \
             --die \
             --zplug \
-            "zplug/zplug: no package managed by zplug\n"
+            "$_ZPLUG_PACKAGE: no package managed by zplug\n"
         return 1
     fi
 
@@ -35,7 +35,7 @@ __zplug::core::self::update()
         #    "update" \
         #    "zplug/zplug"
         #    ^-- Leave these codes just in case for a while
-        __zplug::sources::github::update "zplug/zplug"
+        __zplug::sources::github::update $_ZPLUG_PACKAGE
         ret=$status
         if (( $ret == $_zplug_status[up_to_date] )); then
             ret=$_zplug_status[self_return]
