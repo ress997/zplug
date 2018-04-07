@@ -177,7 +177,8 @@ __zplug::core::core::variable()
     typeset -gx    ZPLUG_REPOS=${ZPLUG_REPOS:-$ZPLUG_HOME/repos}
 
     typeset -gx    _ZPLUG_VERSION="2.4.2"
-    typeset -gx    _ZPLUG_URL="https://github.com/zplug/zplug"
+    typeset -gx    _ZPLUG_PACKAGE=${_ZPLUG_PACKAGE:-"39e/zplug"}
+    typeset -gx    _ZPLUG_URL="https://github.com/$_ZPLUG_PACKAGE"
     typeset -gx    _ZPLUG_OHMYZSH="robbyrussell/oh-my-zsh"
     typeset -gx    _ZPLUG_PREZTO="sorin-ionescu/prezto"
     typeset -gx    _ZPLUG_AWKPATH="$ZPLUG_ROOT/misc/contrib"

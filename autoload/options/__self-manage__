@@ -2,14 +2,14 @@
 # Description:
 #   Self management of zplug
 
-if ! __zplug::base::base::zpluged "zplug/zplug"; then
+if ! __zplug::base::base::zpluged $_ZPLUG_PACKAGE; then
     __zplug::io::print::f \
         --die \
         --zplug \
-        "zplug/zplug: not managed yet\n"
+        "$_ZPLUG_PACKAGE: not managed yet\n"
     return 1
 fi
 
 ln -snf \
-    "$ZPLUG_REPOS/zplug/zplug/init.zsh" \
+    "$ZPLUG_REPOS/$_ZPLUG_PACKAGE/init.zsh" \
     "$ZPLUG_HOME/init.zsh"
