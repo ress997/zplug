@@ -35,8 +35,8 @@ __zplug::job::handle::flock()
         touch "$file"
     fi
 
-    (
-    until zsystem flock -t 3 "$file"
+    local lock_fd
+    until zsystem flock -t 3 -f lock_fd "$file"
     do
         cant_lock=$status
         if (( (++retry) > max )); then
@@ -60,7 +60,7 @@ __zplug::job::handle::flock()
     else
         print    "$contents" >>|"$file"
     fi >>|"$file"
-    )
+    zsystem flock -u $lock_fd
 }
 
 __zplug::job::handle::state()
