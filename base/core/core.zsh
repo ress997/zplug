@@ -249,6 +249,7 @@ __zplug::core::core::variable()
     "defer_1_plugin" "$ZPLUG_CACHE_DIR/defer_1_plugin.zsh"
     "defer_2_plugin" "$ZPLUG_CACHE_DIR/defer_2_plugin.zsh"
     "defer_3_plugin" "$ZPLUG_CACHE_DIR/defer_3_plugin.zsh"
+    "compdump"       "$ZPLUG_CACHE_DIR/compdump"
     )
     # Ensure cache files exist before loading
     mkdir -p "$ZPLUG_CACHE_DIR"
