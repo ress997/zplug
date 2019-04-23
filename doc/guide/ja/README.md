@@ -44,12 +44,12 @@
 ### 推奨方法
 
 ```console
-$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/39e/zplug-installer/master/installer.zsh | zsh
+$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/ress997/zplug-installer/master/installer.zsh | zsh
 ```
 
 インストーラの実態:
 
-- [39e/installer](https://github.com/39e/zplug-installer/blob/master/installer.zsh)
+- [ress997/installer](https://github.com/ress997/zplug-installer/blob/master/installer.zsh)
 
 <!--
 ### [Homebrew](https://github.com/Homebrew/brew) から (OS X)
@@ -65,7 +65,7 @@ GitHub からクローンしてきて `init.zsh` を読み込む:
 
 ```console
 $ export ZPLUG_HOME=/path/to/.zplug
-$ git clone https://github.com/39e/zplug $ZPLUG_HOME
+$ git clone https://github.com/ress997/zplug $ZPLUG_HOME
 ```
 
 ## 必要条件

@@ -45,10 +45,10 @@ latest | stable
 ### The best way
 
 ```console
-$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/39e/zplug-installer/master/installer.zsh | zsh
+$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/ress997/zplug-installer/master/installer.zsh | zsh
 ```
 
-Curious about the installation script? Check it out at [39e/installer](https://github.com/39e/zplug-installer/blob/master/installer.zsh).
+Curious about the installation script? Check it out at [ress997/installer](https://github.com/ress997/zplug-installer/blob/master/installer.zsh).
 
 <!--
 ### Using [Homebrew](https://github.com/Homebrew/brew) (OS X)
@@ -64,7 +64,7 @@ Cloning from GitHub, and source `init.zsh`:
 
 ```console
 $ export ZPLUG_HOME=/path/to/.zplug
-$ git clone https://github.com/39e/zplug $ZPLUG_HOME
+$ git clone https://github.com/ress997/zplug $ZPLUG_HOME
 ```
 
 ## Requirements
